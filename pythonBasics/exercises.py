@@ -291,11 +291,295 @@ import string
 # print(max_country, max_len_country)
 
 
-words = "green-red-yellow-black-white"
+# words = "green-red-yellow-black-white"
+#
+# print(
+#     "-".join(sorted([word for word in words.split("-")], reverse=False))
+# )
+#
+# set1 = set()
+#
+# s1 = {}
+# print(type(s1))
+#
+# fs1 = frozenset(1, 2, 3)
 
-print(
-    "-".join(sorted([word for word in words.split("-")], reverse=False))
-)
+# my_dict = {"a": 1, "c": 3, "d": 4, "b": 2}
+#
+# print(
+#     sorted(
+#         my_dict, key= lambda x, y: x[y], reverse=False
+#     )
+# )
+
+
+# d1 = {'a':
+#           [1, 2, {10:'X', 20:'Y'}]
+#       }
+# print(d1['a'])
+
+# import os
+# print(os.getcwd())
+# import csv
+#
+# word = input("Give me a word: ")
+# alphabet = dict()
+#
+# with open(r"E:\DataEngineer\The Complete Python Bootcamp 2024\files\phonetic_alphabet.csv", "r") as f:
+#     reader = csv.DictReader(f)
+#     for line in reader:
+#         alphabet[line["Letter"]]= line["Code_word"]
+#
+# for ch in word.upper():
+#     print(
+#         alphabet[ch], end=" "
+#     )
+
+
+
+
+#
+# Challenge #1
+#
+# Create a Python script that removes all the elements of a list that are duplicates.
+# Do the challenge in a single line of code using sets.
+#
+
+#
+#
+#
+# Challenge #2
+#
+# Consider a list of words (strings). Write a Python script that generates a dictionary where the key is the word in
+# the list and the value is its length.
+#
+# Sample List: words = ['Python', 'Java', 'C++', 'Golang', 'Solidity', 'Bash']
+#
+# Expected Result: {'Python': 6, 'Java': 4, 'C++': 3, 'Golang': 6, 'Solidity': 8, 'Bash': 4}
+
+# words = ['Python', 'Java', 'C++', 'Golang', 'Solidity', 'Bash']
+#
+# print(
+#     dict((k, len(k)) for k in words)
+# )
+#
+#
+# # Challenge #3
+# #
+# # Considering the following dict, get a dict representation sorted by key.
+# #
+# d1 = {'x': 5, 'a': 3, 'c': 2, 'b': 0}
+# #
+# # A dict representation means viewing or printing the dict.
+#
+# print(
+#     sorted(
+#         d1, key= lambda x: x[0]
+#     )
+# )
+
+# employees = {'John': ('London', 4000, 28), 'Maria':('Zagreb', 3800, 40), 'Diana': ('NYC', 3500, 31)}
+# view = sorted(employees.items(), key=lambda x: x[1][1])
+# print(view)
+
+
+# Challenge #4
+#
+# Considering the following dict, get a dict representation sorted by value.
+#
+# d1 = {'x': 5, 'a': 3, 'c': 2, 'b': 0}
+#
+# A dict representation means viewing or printing the dict.
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #5
+#
+# Let's generalize the last challenge and sort a dictionary by any field of its values if the value is a composite type (list, tuple, etc).
+#
+# Example: Considering this dictionary print a sorted view of the dictionary by the second field of its values.
+#
+# employees = {'John': ('London', 4000, 28), 'Maria': ('Zagreb', 3800, 40), 'Diana': ('NYC', 3500, 31)}
+# The output should be: [('Diana', ('NYC', 3500, 31)), ('Maria', ('Zagreb', 3800, 40)), ('John', ('London', 4000, 28))]
+#
+# P.S. Do it with a single line of code.
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #6
+#
+# Consider this dictionary. Print a sorted view of the dictionary by the third field of its values, in reverse order.
+#
+# employees = {'John': ('London', 4000, 28), 'Maria': ('Zagreb', 3800, 40), 'Diana': ('NYC', 3500, 31)}
+# The output should be: [('Maria', ('Zagreb', 3800, 40)), ('Diana', ('NYC', 3500, 31)), ('John', ('London', 4000, 28))]
+#
+# P.S. Do it with a single line of code.
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #7
+#
+# Consider the dictionary called COUNTRY declared in this Python script.
+#
+# The keys are the country codes and the values are the country names.
+#
+# Print a sorted view of the dictionary, by the key (country code).
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #8
+#
+# Consider the dictionary called COUNTRY declared in this Python script.
+#
+# Find the country which has the longest name.
+#
+# Use list comprehension if possible.
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #9
+#
+# Consider the following two Python Lists that save information about company sales for the last 6 years:
+#
+# years = [2015, 2016, 2017, 2018, 2019, 2020]
+#
+# sales = [350000, 400000, 410000, 439000, 500000, 290000]
+#
+# Create a new list that connects the year to the corresponding sales.
+#
+# The resulting list should be: [(2015, 350000), (2016, 400000), (2017, 410000), (2018, 439000), (2019, 500000), (2020, 290000)]
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #10
+#
+# Consider the following two Python Lists that save information about company sales for the last 6 years:
+#
+years = [2015, 2016, 2017, 2018, 2019, 2020]
+
+sales = [350000, 400000, 410000, 439000, 500000, 290000]
+#
+# Create a new dictionary that has the keys, the years, and the values, the sales.
+#
+# The resulting dict should be: {2015: 350000, 2016: 400000, 2017: 410000, 2018: 439000, 2019: 500000, 2020: 290000}
+
+# print(
+#     dict(zip(years, sales))
+# )
+
+
+# Challenge #11
+#
+# Consider the dictionary from the previous challenge.
+#
+# Create a new dictionary called profit that stores the profit of the company, if the profit margin is 25% of the sales.
+#
+# Use dictionary comprehension if possible.
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #12
+#
+# Consider the following 2 Lists: names = ["Dan", "John", "Diana"] and phones = [11111, 2222, 3333].
+#
+# Create a set that contains the elements of the 2 lists in pairs.
+#
+# The resulting set should be: {('John', 2222), ('Diana', 3333), ('Dan', 11111)}
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #13
+#
+# Consider the two Python lists. Write a Python Script to make a new list whose elements are the intersection of the two given lists. This means all elements of L1 that also belong to L2, but no other elements.
+#
+# Are you stuck? Do you want to see the solution to this exercise? Click here.
+#
+#
+#
+# Challenge #14
+#
+# Write a Python script that validates an email address by writing "Valid email!" or "Invalid email!".
+#
+# If the email is not valid the script should display why it's not valid.
+#
+# We consider a valid email address if:
+#
+# it has at least 6 characters but no more than 16.
+#
+# it contains both . and @
+#
+# it does not contain any of the following characters:'[]{}()$*'
+#
+# x = 10
+#
+# def my_func(x = 2):
+#     #global x
+#     #x = 15
+#     print(f"x inside the function: {x}")
+#
+# my_func()
+# print(x)
+
+#
+# result = lambda x: x ** 2
+# print(result(2))
+
+# def perfect_number(x):
+#     divisors = []
+#     for i in range(1, x):
+#         if x % i == 0:
+#             divisors.append(i)
+#
+#     if sum(divisors) == x:
+#         return f"{x} is a perfect number"
+#     else:
+#         return f"{x} is not a perfect number"
+#
+#
+# print(
+#     perfect_number(496)
+# )
+#
+# def factorial(n):
+#     result = 1
+#     if n <= 1:
+#         return 1
+#     for x in range(1, n+1):
+#         result *= x
+#
+#     return result
+#
+# print(
+#     factorial(5)
+# )
+#
+# def isPrime(n):
+#     if n <= 0:
+#         raise ValueError
+#     for x in range(2, n // 2):
+#         if n % x == 0:
+#             return f"{n} is not prime"
+#     else:
+#         return f"{n} is prime"
+#
+# for x in range(2, 100):
+#     print(isPrime(x))
 
 
 
